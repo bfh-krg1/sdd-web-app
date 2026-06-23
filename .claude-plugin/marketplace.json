@@ -1,0 +1,24 @@
+{
+  "name": "sdd-web-app",
+  "owner": {
+    "name": "BFH",
+    "url": "https://github.com/bfh-krg1/sdd-web-app"
+  },
+  "plugins": [
+    {
+      "name": "core",
+      "source": "./core",
+      "description": "Stack-agnostic methodology: vision, requirements, data model, feature specs, sprint, ship, deploy"
+    },
+    {
+      "name": "fastapi-vue",
+      "source": "./fastapi-vue",
+      "description": "FastAPI + SQLAlchemy 2.0 + Alembic + pgvector + Vue3 + Vite monorepo stack plugin"
+    },
+    {
+      "name": "node-vue",
+      "source": "./node-vue",
+      "description": "Fastify 5 + Drizzle ORM + pgvector + Vue3 + Vite monorepo stack plugin"
+    }
+  ]
+}

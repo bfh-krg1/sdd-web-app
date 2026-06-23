@@ -1,0 +1,9 @@
+{
+  "name": "fastapi-vue",
+  "description": "FastAPI + SQLAlchemy 2.0 + Alembic + pgvector + Vue3 + Vite monorepo stack plugin",
+  "version": "1.0.0",
+  "author": {
+    "name": "BFH",
+    "url": "https://github.com/bfh-krg1/sdd-web-app"
+  }
+}

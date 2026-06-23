@@ -1,0 +1,9 @@
+{
+  "name": "core",
+  "description": "Stack-agnostic methodology: vision, requirements, data model, feature specs, sprint, ship, deploy",
+  "version": "1.0.0",
+  "author": {
+    "name": "BFH",
+    "url": "https://github.com/bfh-krg1/sdd-web-app"
+  }
+}

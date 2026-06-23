@@ -1,0 +1,9 @@
+{
+  "name": "node-vue",
+  "description": "Fastify 5 + Drizzle ORM + pgvector + Vue3 + Vite monorepo stack plugin",
+  "version": "1.0.0",
+  "author": {
+    "name": "BFH",
+    "url": "https://github.com/bfh-krg1/sdd-web-app"
+  }
+}
