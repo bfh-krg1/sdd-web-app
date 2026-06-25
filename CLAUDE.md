@@ -17,12 +17,25 @@ Stack-agnostic AI-dev process plugins for Claude Code. Lighter than RUP/AIUP: no
 
 ## Workflow
 
+**Option A — stepwise wizard (start from scratch):**
 ```
 /vision         →  docs/vision.md          (Socratic interview, one-time)
 /requirements   →  docs/requirements.md    (FR/NFR/Constraints tables)
 /architecture   →  docs/architecture.md    (stack declaration; writes FastAPI default if absent)
 /data-model     →  docs/data_model.md      (attribute tables + optional Mermaid ER)
 /feature-spec   →  docs/features/*.md      (all FRs at once, or /feature-spec FR-001)
+```
+
+**Option B — PRD bootstrap (you already have a product doc):**
+```
+# Place your PRD at docs/prd.md, then:
+/prd            →  writes all of the above in one pass (vision, requirements, architecture,
+                   data model, feature specs) extracted from the PRD.
+                   Defaults to fastapi-vue if the PRD doesn't specify a stack.
+```
+
+**Construction + delivery (same for both options):**
+```
 /sprint         →  branch + implement + test all Approved features; auto-commit per feature
 /ship           →  push feature branch (confirm first) + offer PR via gh/glab
 /deploy         →  docker-compose scaffold

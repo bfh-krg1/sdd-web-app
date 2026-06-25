@@ -4,12 +4,14 @@ Claude Code plugin marketplace for AI-assisted web app development. Lighter and 
 
 ## Quick start
 
+### Option A — start from scratch (guided wizard)
+
 ```bash
 # 1. Install the marketplace
 /plugin marketplace add ./sdd-web-app
 /reload-plugins
 
-# 2. In your project directory — start with the vision
+# 2. In your project directory — start with the vision interview
 /vision
 
 # 3. Define requirements and architecture
@@ -27,10 +29,30 @@ Claude Code plugin marketplace for AI-assisted web app development. Lighter and 
 /ship
 ```
 
+### Option B — bootstrap from an existing PRD
+
+Already pitched your idea to another AI agent and got a PRD back?
+Drop it at `docs/prd.md` and let `/prd` do the rest:
+
+```bash
+/plugin marketplace add ./sdd-web-app
+/reload-plugins
+
+# Place your PRD (any format) at docs/prd.md, then:
+/prd       # reads the PRD and writes vision.md, requirements.md, architecture.md,
+           # data_model.md, and all feature specs in one pass.
+           # Defaults to fastapi-vue if the PRD doesn't specify a stack.
+
+# Review docs/features/ — all features start as Approved (PRD is already validated)
+/sprint
+/ship
+```
+
 ## Workflow reference
 
 | Command | Output | Notes |
 |---|---|---|
+| `/prd` | all docs at once | Alternative to the wizard; reads `docs/prd.md` |
 | `/vision` | `docs/vision.md` | Socratic interview, one-time |
 | `/requirements` | `docs/requirements.md` | FR/NFR/Constraints tables |
 | `/architecture` | `docs/architecture.md` | Writes default if absent |
